@@ -1,14 +1,15 @@
 import React from "react";
-import { Route, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Home from "./pages/Home/home.jsx"
 
-const Routes = () => {
-    return(
+const Rotas = () => {
+    return (
         <BrowserRouter>
-
-        <Route component = {Home} />
+            <Routes>
+                <Route path="/" element={<Home />} />
+            </Routes>
         </BrowserRouter>
     )
 }
 
-export default Rotas();
+export default Rotas;

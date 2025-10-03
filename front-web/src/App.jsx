@@ -1,12 +1,11 @@
-import { useState } from 'react'
 import Rotas from './routes'
 
 function App() {
   return (
     <>
-    <Rotas></Rotas>
+    <Rotas/>
     </>
   )
 }
 
-export default App
+export default App;

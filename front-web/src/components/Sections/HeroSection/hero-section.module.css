@@ -1,0 +1,48 @@
+.heroContainer {
+    min-width: 100vw;
+    height: 100vh;
+
+    background-image: var(--hero-bg-url);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border: 5px solid lime;
+
+    color: var(--cor-branco);
+}
+
+.mainContent {
+    display: flex;
+    justify-content: center;
+
+    width: 70%;
+    flex-grow: 1;
+
+
+}
+
+.titleArea {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 60%;
+    height: 100%;
+    gap: 2rem;
+}
+
+.titleArea h1 {
+    font-size: 72px;
+    font-family: PlayfairDisplay;
+}
+
+.titleArea h2 {
+    font-size: 32px;
+    text-align: center;
+}

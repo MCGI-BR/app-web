@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 import styles from './home.module.css'
-import HeroSection from '../../components/Sections/HeroSection/hero_section.jsx'
+import HeroSection from '../../components/Sections/HeroSection/hero-section.jsx'
+import Navbar from '../../components/Navbar/navbar.jsx'
 
-function Home(){
-    return(
+const Home = () => {
+    return (
         <>
-        <HeroSection>
-
-        </HeroSection>
+            <Navbar />
+            <main>
+                <HeroSection />
+            </main>
         </>
     )
 }
