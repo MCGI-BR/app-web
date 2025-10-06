@@ -1,38 +1,57 @@
 @font-face {
   font-family: 'Gotham';
-  src: url('./fonts/gotham/GOTHAM-MEDIUM.ttf');
+  src: url(./fonts/gotham/Gotham/GOTHAM-MEDIUM.woff2) format('woff2'),
+    url(./fonts/gotham/Gotham/GOTHAM-MEDIUM.ttf) format('truetype');
   font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src: url(./fonts/gotham/Gotham/GOTHAM-BOLD.woff2) format('woff2');
+    /* url(./fonts/gotham/Gotham/GOTHAM-BOLD.TTF) format('truetype'); */
+  font-weight: 700;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'Gotham';
+  src: url(./fonts/gotham/Gotham/GOTHAM-BLACK.TTF) format('truetype');
+    /* url(./fonts/gotham/Gotham/GOTHAM-BOLD.TTF) format('truetype'); */
+  font-weight: 900;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'PlayfairDisplay';
   src: url(./fonts/Playfair_Display/PlayfairDisplay-VariableFont_wght.ttf);
-  font-weight: 700;
+  font-weight: 500;
   font-style: normal;
 }
 
 :root {
   --font-gotham: 'Gotham', sans-serif;
   --cor-branco: #F9F9F9;
-  --cor-azul-escuro: #0A1A2F
+  --cor-azul-escuro: #0A1A2F;
   --cor-amarelo: #FDAD00;
 }
 
-body,html{
+body,
+html {
   margin: 0;
-    padding: 0;
-    height: 100%;
-    font-family: var(--font-gotham);
-    line-height: 1.5;
+  padding: 0;
+  min-height: 100dvh;
+  font-family: var(--font-gotham);
+  overflow-y: scroll;
 }
 
 * {
-margin: 0;
-padding: 0;
-text-decoration: none;
-list-style-type: none;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
 }
 
 h1 {

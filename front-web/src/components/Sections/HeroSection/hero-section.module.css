@@ -1,6 +1,19 @@
+@keyframes zoom-effect {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 115%;
+    }
+}
+
 .heroContainer {
-    min-width: 100vw;
-    height: 100vh;
+    animation: zoom-effect 15s infinite alternate ease-in-out;
+    overflow: hidden;
+
+    min-width: 100dvw;
+    min-height: 100dvh;
 
     background-image: var(--hero-bg-url);
     background-size: cover;
@@ -11,38 +24,48 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-    border: 5px solid lime;
-
     color: var(--cor-branco);
+
 }
 
 .mainContent {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
 
     width: 70%;
     flex-grow: 1;
-
+    gap: 8rem;
 
 }
 
 .titleArea {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: column;
 
     width: 60%;
-    height: 100%;
-    gap: 2rem;
+    gap: 5rem;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .titleArea h1 {
-    font-size: 72px;
+    font-size: 80px;
     font-family: PlayfairDisplay;
 }
 
 .titleArea h2 {
     font-size: 32px;
     text-align: center;
+}
+
+.ctaArea {
+    width: 100%;
+    gap: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

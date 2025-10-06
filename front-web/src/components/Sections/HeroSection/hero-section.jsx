@@ -9,8 +9,7 @@ const HeroSection = () => {
             <section
                 id='hero'
                 className={styles.heroContainer}
-                style={{ '--hero-bg-url': `url(${HeroBg})` }}
-            >
+                style={{ '--hero-bg-url': `url(${HeroBg})` }}>
 
                 <div className={styles.mainContent}>
                     <div className={styles.titleArea}>
@@ -23,13 +22,23 @@ const HeroSection = () => {
                     </div>
                     <div className={styles.ctaArea}>
                         <Button
-                        bgColor="var(--cor-amarelo)"
-                        textColor="var(--cor-branco"
-                        fontSize={"32px"}
-                        padding={"rem"}
+                            bgColor="#FDAD00"
+                            textColor="var(--cor-branco)"
+                            fontSize={"40px"}
+                            padding={"0.5rem 10rem"}
 
-                        href="#saiba-mais"
-                        >SAIBA MAIS
+                            href="#saiba-mais">
+                            SAIBA MAIS
+                        </Button>
+
+                        <Button
+                            bgColor="transparent"
+                            textColor="var(--cor-branco)"
+                            fontSize={"24px"}
+                            padding={"0.5rem 5rem"}
+                            borderColor="var(--cor-branco)"
+                            href={"#contato"}>
+                            ENTRE EM CONTATO
                         </Button>
                     </div>
                 </div>

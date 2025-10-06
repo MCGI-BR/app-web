@@ -3,6 +3,8 @@ import styles from './button.module.css'
 
 const Button = ({
     children,
+    width,
+    height,
     bgColor,
     textColor,
     borderColor,
@@ -12,21 +14,28 @@ const Button = ({
     ...anotherProps
 }) => {
     const buttonStyle = {
+
         backgroundColor: bgColor || 'transparent',
-        color: textColor || 'var(--cor-branco)',
-        border: 'none',
+        color: textColor || '#F9F9F9',
+        border: borderColor ? `6px solid ${borderColor}` : 'none',
         padding: padding || '1.5rem',
 
         cursor: 'pointer',
-        borderRadius: '8px',
+        borderRadius: '50px',
         textDecoration: 'none',
         textAlign: 'center',
         transition: 'all 0.3s ease',
+
+        display: 'inline-block',
+        fontSize: fontSize || '1rem'
     };
+
+        const classNames = `${styles.buttonBase} ${anotherProps.className || ''}` 
 
     if (href) {
         return (
             <a href={href}
+                className={classNames}
                 style={buttonStyle}
                 {...anotherProps}
             >
@@ -37,6 +46,7 @@ const Button = ({
 
     return (
         <button
+            className={classNames}
             style={buttonStyle}
             {...anotherProps}>
             {children}
