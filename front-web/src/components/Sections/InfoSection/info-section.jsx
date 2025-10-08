@@ -2,6 +2,9 @@ import React from 'react';
 import styles from './info-section.module.css'
 import mcgiLogo from '../../../utils/assets/MCGI_logo_star 2.png'
 import Button from '../../Button/button';
+import Card from '../../Card/card';
+import bes from '../../../utils/assets/bes.jpg';
+import kdr from '../../../utils/assets/kdr.jpg';
 
 const InfoSection = () => {
     return (
@@ -35,13 +38,24 @@ const InfoSection = () => {
                     </div>
                 </div>
                 <div className={styles.cardContainer}>
-
-                </div>
-                <div className={styles.cardSlider}>
                     <div className={styles.cardsArea}>
+                        <Card
+                        cardImage={bes}
+                        cardAlt="Imagem do irmao eli"
+                        title="ELI SORIANO"
+                        ></Card>
+
+                        <Card
+                        cardImage={kdr}
+                        cardAlt="Imagem do irmao daniel"
+                        title="DANIEL RAZON"
+                        ></Card>
+                    </div>
+                    <div className={styles.slider}>
 
                     </div>
                 </div>
+
             </section>
         </>
     )

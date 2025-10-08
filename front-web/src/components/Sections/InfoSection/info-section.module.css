@@ -66,7 +66,17 @@
 /* RIGHT SIDE */
 
 .cardContainer {
+    display: flex;
+    justify-content: center;
     width: 65%;
     min-height: 100dvh;
     background-color: var(--cor-azul-escuro);
+    border: 5px solid blue;
+}
+
+.cardsArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
 }
