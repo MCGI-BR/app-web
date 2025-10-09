@@ -5,6 +5,8 @@ import Button from '../../Button/button';
 import Card from '../../Card/card';
 import bes from '../../../utils/assets/bes.jpg';
 import kdr from '../../../utils/assets/kdr.jpg';
+import {Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules'
+import {Swiper, SwiperSlide} from 'swiper/modules';
 
 const InfoSection = () => {
     return (
