@@ -1,6 +1,7 @@
 import React from 'react';
 import Slider from 'react-slick';
 import styles from './universal-slider.module.css';
+import Card from '../Card/card';
 
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,13 +9,15 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const UniversalSlider = ({ data, settings }) => {
 
+    const sliderData = data || [];
+
     const defaultSettings = {
         dots: true,
         infinite: true,
         speed: 500,
         arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
     };
 
     const sliderSettings = { ...defaultSettings, ...settings };
@@ -22,24 +25,13 @@ const UniversalSlider = ({ data, settings }) => {
     return (
         <div className={styles.sliderWrapper}>
             <Slider {...sliderSettings}>
-                {/* {data.map((item, index) => (
+                {sliderData.map((item, index) => (
                     <div key={index} className={styles.slideItem}>
-                        <img
-                            className={styles.slideImage}
-                            src={item.src}
+                        <img src={item.src}
                             alt={item.alt}
                         />
                     </div>
-                ))} */}
-                <div className={styles.test}>
-                    <h3>1</h3>
-                </div>
-                <div className={styles.test}>
-                    <h3>1</h3>
-                </div>
-                 <div className={styles.test}>
-                    <h3>1</h3>
-                </div>
+                ))}
             </Slider>
         </div>
     );

@@ -11,22 +11,26 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const cardData = [
-    { src: bes, alt: "Irmão Eli" },
-    { src: kdr, alt: "Irmão Daniel" },
+    { src: bes, alt: "Irmão Eli", title: "ELI SORIANO" },
+    { src: kdr, alt: "Irmão Eli", title: "ELI SORIANO" },
+    { src: kdr, alt: "Irmão Eli", title: "ELI SORIANO" },
+    { src: bes, alt: "Irmão Eli", title: "ELI SORIANO" },
+    { src: kdr, alt: "Irmão Eli", title: "ELI SORIANO" },
+
+
+
 ];
 
 const cardSliderSettings = {
     arrows: true,
     dots: true,
-    infinite: false,
+    infinite: true,
     speed: 500,
-    responsive: [
-        {
-            breakpoint: 768,
-            settings: {
-            }
-        }
-    ]
+    slidesToShow: 2,
+    slidesToScroll: 2,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    cssEase: 'ease'
 }
 
 const InfoSection = () => {

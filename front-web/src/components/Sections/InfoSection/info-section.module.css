@@ -72,15 +72,29 @@
     min-height: 400px;
     padding: 2rem 2rem;
     display: flex;
+    align-items: center;
     background-color: var(--cor-azul-escuro);
     overflow: hidden;
+    border: 5px solid lightblue;
 }
 
 .sliderArea {
     min-width: 100%;
     display: flex;
     align-items: center;
-    border: 5px solid lightblue;
-    max-width: 1px;
+    max-width: 0;
 }
+
+.sliderArea :global(.slick-track) {
+    display: flex !important;
+    width: 100% !important;
+    min-width: 100% !important;
+}
+
+.sliderArea :global(.slick-list) {
+    box-sizing: border-box !important;     
+    overflow: hidden !important;
+}
+
+
 
