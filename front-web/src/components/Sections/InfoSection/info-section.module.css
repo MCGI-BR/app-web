@@ -4,6 +4,7 @@
     font-family: PlayfairDisplay;
     display: flex;
     align-items: stretch;
+    overflow-x: hidden;
 }
 
 .logo {
@@ -66,17 +67,20 @@
 /* RIGHT SIDE */
 
 .cardContainer {
-    display: flex;
-    justify-content: center;
     width: 65%;
-    min-height: 100dvh;
+    height: auto;
+    min-height: 400px;
+    padding: 2rem 2rem;
+    display: flex;
     background-color: var(--cor-azul-escuro);
-    border: 5px solid blue;
+    overflow: hidden;
 }
 
-.cardsArea {
+.sliderArea {
+    min-width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
-    gap: 3rem;
+    border: 5px solid lightblue;
+    max-width: 1px;
 }
+

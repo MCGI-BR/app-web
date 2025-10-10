@@ -5,8 +5,29 @@ import Button from '../../Button/button';
 import Card from '../../Card/card';
 import bes from '../../../utils/assets/bes.jpg';
 import kdr from '../../../utils/assets/kdr.jpg';
-import {Navigation, Pagination, Scrollbar, A11y} from 'swiper/modules'
-import {Swiper, SwiperSlide} from 'swiper/modules';
+import UniversalSlider from '../../UniversalSlider/universalSlider';
+
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const cardData = [
+    { src: bes, alt: "Irmão Eli" },
+    { src: kdr, alt: "Irmão Daniel" },
+];
+
+const cardSliderSettings = {
+    arrows: true,
+    dots: true,
+    infinite: false,
+    speed: 500,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+            }
+        }
+    ]
+}
 
 const InfoSection = () => {
     return (
@@ -40,27 +61,17 @@ const InfoSection = () => {
                     </div>
                 </div>
                 <div className={styles.cardContainer}>
-                    <div className={styles.cardsArea}>
-                        <Card
-                        cardImage={bes}
-                        cardAlt="Imagem do irmao eli"
-                        title="ELI SORIANO"
-                        ></Card>
-
-                        <Card
-                        cardImage={kdr}
-                        cardAlt="Imagem do irmao daniel"
-                        title="DANIEL RAZON"
-                        ></Card>
-                    </div>
-                    <div className={styles.slider}>
-
+                    <div className={styles.sliderArea}>
+                        <UniversalSlider
+                            data={cardData}
+                            settings={cardSliderSettings}>
+                        </UniversalSlider>
                     </div>
                 </div>
-
             </section>
         </>
     )
 }
 
 export default InfoSection;
+
