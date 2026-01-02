@@ -16,8 +16,11 @@ const UniversalSlider = ({ data, settings }) => {
         infinite: true,
         speed: 500,
         arrows: true,
-        slidesToShow: 1,
+        slidesToShow: 2,
         slidesToScroll: 1,
+        centerMode: false,
+        variableWidth: false,
+        adaptiveHeight: true,
     };
 
     const sliderSettings = { ...defaultSettings, ...settings };
@@ -26,9 +29,11 @@ const UniversalSlider = ({ data, settings }) => {
         <div className={styles.sliderWrapper}>
             <Slider {...sliderSettings}>
                 {sliderData.map((item, index) => (
-                    <div key={index} className={styles.slideItem}>
-                        <img src={item.src}
-                            alt={item.alt}
+                    <div key={index} className={styles.slideContainer}>
+                        <Card
+                            cardImage={item.src}
+                            cardAlt={item.alt}
+                            title={item.title || "Título Padrão"}
                         />
                     </div>
                 ))}

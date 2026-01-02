@@ -1,0 +1,10 @@
+.sliderContainer {
+    width: 100%;
+    min-height: 100dvh;
+    font-family: PlayfairDisplay;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    border: 5px solid lime;
+}

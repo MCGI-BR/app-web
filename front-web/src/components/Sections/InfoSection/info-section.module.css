@@ -67,15 +67,13 @@
 /* RIGHT SIDE */
 
 .cardContainer {
-    width: 65%;
-    height: auto;
-    min-height: 400px;
+    width: 100%;
+    border: 5px solid red;
     padding: 2rem 2rem;
     display: flex;
     align-items: center;
     background-color: var(--cor-azul-escuro);
     overflow: hidden;
-    border: 5px solid lightblue;
 }
 
 .sliderArea {
@@ -84,17 +82,3 @@
     align-items: center;
     max-width: 0;
 }
-
-.sliderArea :global(.slick-track) {
-    display: flex !important;
-    width: 100% !important;
-    min-width: 100% !important;
-}
-
-.sliderArea :global(.slick-list) {
-    box-sizing: border-box !important;     
-    overflow: hidden !important;
-}
-
-
-

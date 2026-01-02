@@ -1,0 +1,23 @@
+.sliderWrapper {
+    position: relative;
+    overflow: hidden;
+    min-width: 100%;
+    min-height: 80%;
+    border: 5px solid purple;
+}
+
+.bigSliderItem {
+    outline: none;
+    position: relative;
+}
+
+.sliderWrapper :global(.slick-dots li) {
+    width: 40px !important;
+}
+
+.sliderWrapper :global(.slick-dots li button:before) {
+    width: 40px !important;
+    height: 6px !important;
+    background: white !important;
+    border-radius: 3px;
+}
